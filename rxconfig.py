@@ -1,9 +1,9 @@
 import reflex as rx
+from reflex_base.plugins.sitemap import SitemapPlugin
+from reflex.plugins import RadixThemesPlugin
 
 config = rx.Config(
     app_name="mi_app",
-    plugins=[
-        rx.plugins.SitemapPlugin(),
-        rx.plugins.TailwindV4Plugin(),
-    ]
+    disable_plugins=[SitemapPlugin],   # desactiva SitemapPlugin
+    plugins=[RadixThemesPlugin()]      # activa Radix explícitamente
 )
